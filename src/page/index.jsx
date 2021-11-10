@@ -13,7 +13,7 @@ function MainPage() {
 
 
     const changeLanguage = (e) => {
-        if (e.target.value === "russian") {
+        if (e.target.value ==="russian") {
             dispatch(changeToRussian())
         } else if (e.target.value === "english") {
             dispatch(changeToEnglish())
@@ -27,9 +27,8 @@ const language = useSelector(state => state.language)
                 <Navbars>
                     <img class="logo" src="https://moodle.com/wp-content/uploads/2020/08/MoodleLogo_TrademarkTM_PrimaryColour_RGB.svg" alt="Moodle" />
                     <select onChange={changeLanguage}>
-                      
-                        <option value="en">English</option>
-                        <option value="ru">Russian</option>
+                        <option value="russian">Russian</option>
+                        <option value="english">English</option>
                     </select>
                     <div className='contactss'>
                         <div className='abd'><a href="#"><Text id='contact' /></a></div>
