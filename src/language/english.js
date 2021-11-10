@@ -17,5 +17,8 @@ export const english = {
    user:"Users",
    courses:"Courses",
    site:"Sites",
-   countries:"Countries"
+   countries:"Countries",
+   learn:"Learn more",
+   build:"Build your online learning site in minutes",
+   want:"Want to start teaching your class online, train your staff or sell courses? MoodleCloud is the fastest way to get a Moodle site for trial or off-the-shelf applications."
 }

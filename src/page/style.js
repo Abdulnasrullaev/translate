@@ -48,12 +48,59 @@ export const Title = styled.p`
 `;
 export const Country = styled.div`
   width:118%;
-  padding: 30px 3.4px;
+  height: 380px;
+  padding: 60px 3.4px;
   margin: 80px -115px;
   background-color: #F9F0E8;
+  display: flex;
   .title{
     margin: 40px 110px;
     width: 40%;
     font-size: 21px;
+  }
+  .icons{
+    display: flex;
+    width: 64%;
+    margin: 60px auto;
+    flex-wrap: wrap;
+    .cards{
+      width: 25%;
+      margin: -20px 0px -40px 80px;
+      display: flex; 
+      height: 100px;
+    .img-icon{
+      height: 60px;
+      width: 60px;
+    }
+    .title{
+      font-size: 27px;
+      font-weight: bolder;
+      margin: -4px 20px;
+      span{
+        font-size: 24px;
+        font-weight: normal;
+        color: gray;
+      }
+    }
+    }
+  }
+`;
+
+export const Cards = styled.div`
+  width: 100%;
+  margin: -107px 0;
+  display: flex;
+  color: white;
+  background-color: #494949;
+  .card{
+    width: 50%;
+    margin: 30px auto;
+    .title{
+      font-weight: bolder;
+      font-size: 36px;
+    }
+    .about{
+font-size: 22px;
+    }
   }
 `;

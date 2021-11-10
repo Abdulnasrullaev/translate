@@ -5,7 +5,7 @@ import { languages } from '../constant/actionType'
 import Text from '../language/text'
 import { Navbars } from '../navbar/style'
 import { changeToEnglish, changeToRussian } from '../redux/modules/language/languageAction'
-import { MainPages, Title, About, Country, } from './style'
+import { MainPages, Title, About, Country, Cards, } from './style'
 
 
 function MainPage() {
@@ -37,9 +37,9 @@ const language = useSelector(state => state.language)
                     <ul className='navs'>
                         <li><a href="#"><Text id='solution' /></a></li>
                         <li><a href="#"><Text id='products' /> </a></li>
-                        <li><a href="#"><Text id='pricing' /> </a></li>
-                        <li><a href="#"><Text id='services' /> </a></li>
-                        <li><a href="#"><Text id='events' /> </a></li>
+                        <li><a href="#"><Text id='price' /> </a></li>
+                        <li><a href="#"><Text id='service' /> </a></li>
+                        <li><a href="#"><Text id='event' /> </a></li>
                         <li><a href="#"><Text id='community' /> </a></li>
                         <li><a href="#"><Text id='news' /> </a></li>
                         <li><a href="#"><Text id='about' /> </a></li>
@@ -60,8 +60,24 @@ const language = useSelector(state => state.language)
                     <button className='buttons'><Text id ='discover'/></button>
                     <Country>
                         <p className="title"><Text id='organisation'/> </p>
+                        <div className='icons'>
+                            <div className="cards"><img class="img-icon" alt="Users" src="https://moodle.com/wp-content/uploads/2020/03/Users.png"/> <p className="title">292,000,000+ <span>< Text id='user'/></span></p></div>
+                            <div className="cards"><img class="img-icon" alt="courses" src="https://moodle.com/wp-content/uploads/2020/03/courses.png"/> <p className="title">38,000,000+ <br /><span>< Text id='courses'/></span></p></div>
+                            <div className="cards"><img class="img-icon" alt="sites" src="https://moodle.com/wp-content/uploads/2020/03/sites.png"/> <p className="title">183,000+  <br /><span>< Text id='site'/></span></p></div>
+                            <div className="cards"><img class="img-icon" alt="country" src="https://moodle.com/wp-content/uploads/2020/03/country.png"/> <p className="title">240+<br /><span>< Text id='countries'/></span></p></div>
+                            
+                        </div>
                     </Country>
+
                 </About>
+                <Cards>
+    <div className="card">
+        <p className="title"><Text id='build'/></p>
+        <p className="about">< Text id="want"/> </p> 
+        <button><Text id='learn'/></button>
+        </div>
+        <div className="img"><img width="466" height="282" src="https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png" class="vc_single_image-img attachment-large" alt="getstarted 3" loading="lazy" srcset="https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 300w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 248w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 81w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 466w" sizes="(max-width: 466px) 100vw, 466px"/></div>
+</Cards>
             </MainPages>
         </>
     )
