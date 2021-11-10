@@ -74,7 +74,7 @@ const language = useSelector(state => state.language)
     <div className="card">
         <p className="title"><Text id='build'/></p>
         <p className="about">< Text id="want"/> </p> 
-        <button><Text id='learn'/></button>
+        <button className='textt'><Text id='learn'/></button>
         </div>
         <div className="img"><img width="466" height="282" src="https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png" class="vc_single_image-img attachment-large" alt="getstarted 3" loading="lazy" srcset="https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 300w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 248w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 81w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 466w" sizes="(max-width: 466px) 100vw, 466px"/></div>
 </Cards>

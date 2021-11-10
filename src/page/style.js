@@ -94,7 +94,7 @@ export const Cards = styled.div`
   background-color: #494949;
   .card{
     width: 50%;
-    margin: 30px auto;
+    margin: 30px  100px auto;
     .title{
       font-weight: bolder;
       font-size: 36px;
@@ -102,5 +102,23 @@ export const Cards = styled.div`
     .about{
 font-size: 22px;
     }
+    .textt{
+      outline: none;
+      margin: 20px 0px;
+      width: 180px;
+      height:65px;
+      font-size: 18px;
+      color: #494949;
+      font-weight: 700;
+      border:none;
+      background-color: orange;
+      border-radius: 40px;
+    }
+    .textt:hover{
+      opacity: 0.7;
+    }
   }
+.img{
+  margin: 90px 70px;
+}
 `;
