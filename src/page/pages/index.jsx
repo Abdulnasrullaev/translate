@@ -1,10 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { languages } from '../constant/actionType'
-import Text from '../language/text'
-import { Navbars } from '../navbar/style'
-import { changeToEnglish, changeToRussian } from '../redux/modules/language/languageAction'
+import { languages } from '../../constant/actionType'
+import Text from '../../language/text'
+import { Navbars } from '../../navbar/style'
+import { changeToDeutch, changeToEnglish, changeToFrench, changeToRussian, changeToTajik } from '../../redux/modules/language/languageAction'
+import Products from '../product'
 import { MainPages, Title, About, Country, Cards, } from './style'
 
 
@@ -13,10 +14,16 @@ function MainPage() {
 
 
     const changeLanguage = (e) => {
-        if (e.target.value ==="russian") {
+        if (e.target.value ===languages.russian) {
             dispatch(changeToRussian())
-        } else if (e.target.value === "english") {
+        } else if (e.target.value === languages.english) {
             dispatch(changeToEnglish())
+        } else if (e.target.value===languages.deutch) {
+            dispatch(changeToDeutch())
+        } else if (e.target.value===languages.french) {
+            dispatch(changeToFrench())
+        } else if (e.target.value===languages.tajik) {
+            dispatch(changeToTajik())
         }
 
     }
@@ -26,9 +33,12 @@ const language = useSelector(state => state.language)
             <MainPages>
                 <Navbars>
                     <img class="logo" src="https://moodle.com/wp-content/uploads/2020/08/MoodleLogo_TrademarkTM_PrimaryColour_RGB.svg" alt="Moodle" />
-                    <select onChange={changeLanguage}>
-                        <option value="russian">Russian</option>
-                        <option value="english">English</option>
+                    <select value={language} onChange={changeLanguage}>
+                        <option value={languages.russian}>Russian</option>
+                        <option value={languages.english}>English</option>
+                        <option value={languages.deutch}>Deutch</option>
+                        <option value={languages.french}>French</option>
+                        <option value={languages.tajik}>Tajik</option>
                     </select>
                     <div className='contactss'>
                         <div className='abd'><a href="#"><Text id='contact' /></a></div>
@@ -78,6 +88,7 @@ const language = useSelector(state => state.language)
         </div>
         <div className="img"><img width="466" height="282" src="https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png" class="vc_single_image-img attachment-large" alt="getstarted 3" loading="lazy" srcset="https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 300w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 248w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 81w, https://moodle.com/wp-content/uploads/2020/03/getstarted-3.png 466w" sizes="(max-width: 466px) 100vw, 466px"/></div>
 </Cards>
+<Products/>
             </MainPages>
         </>
     )
